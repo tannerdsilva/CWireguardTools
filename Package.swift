@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "CWireguardTools",
 			path:"./wireguard-tools/src",
-			exclude:["./wincompat", "./wg-quick", "./man", "./fuzz", "./systemd", "./terminal.c"],
+			exclude:["./wincompat", "./wg-quick", "./man", "./fuzz", "./systemd", "./terminal.c", "./curve25519-fiat32.h", "./curve25519-hacl64.h"],
 			publicHeadersPath:".",
 			cSettings: [.define("RUNSTATEDIR", to: "\"/var/run\"")])
     ]
