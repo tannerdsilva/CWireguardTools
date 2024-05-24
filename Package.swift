@@ -16,8 +16,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "CWireguardTools",
-			path:"./wireguard-tools/src",
-			exclude:["./wincompat", "./wg-quick", "./man", "./fuzz", "./systemd", "./terminal.c", "./curve25519-fiat32.h", "./curve25519-hacl64.h"],
+//			path:"./wireguard-tools/src",
+//			exclude:["./uapi/windows", "./uapi/openbsd", "./uapi/freebsd"],
 			publicHeadersPath:".",
 			cSettings: [.define("RUNSTATEDIR", to: "\"/var/run\"")])
     ]
