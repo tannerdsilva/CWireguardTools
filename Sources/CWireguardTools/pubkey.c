@@ -1,1 +1,0 @@
-../../wireguard-tools/src/pubkey.c

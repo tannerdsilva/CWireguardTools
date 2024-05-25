@@ -16,9 +16,10 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "CWireguardTools",
-//			path:"./wireguard-tools/src",
-//			exclude:["./uapi/windows", "./uapi/openbsd", "./uapi/freebsd"],
+			path:"./wireguard-tools/contrib/embeddable-wg-library",
+			exclude:["./test.c", "./README", "./Makefile"],
 			publicHeadersPath:".",
-			cSettings: [.define("RUNSTATEDIR", to: "\"/var/run\"")])
+			cSettings: [.define("RUNSTATEDIR", to: "\"/var/run\"")]),
+		// .target(name: "WireguardTools", dependencies: ["CWireguardTools"])
     ]
 )
